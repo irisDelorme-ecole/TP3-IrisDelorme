@@ -71,7 +71,7 @@ public class Utilisateur implements Comparable<Utilisateur> {
      * @throws IllegalArgumentException si le nom d'utilisateur dépasse 15 caractères
      */
     public void setUsername(String username) throws IllegalArgumentException {
-        if (username.length() <= MAX_USERNAME_LENGTH) {
+        if (username != null && username.length() <= MAX_USERNAME_LENGTH) {
             user = username;
         } else throw new IllegalArgumentException("Le nom d'utilisateur doit avoir un maximum de 15 charactères.");
     }
@@ -100,6 +100,9 @@ public class Utilisateur implements Comparable<Utilisateur> {
         boolean hasLower = false;
         boolean hasNumber = false;
 
+        if (password == null)
+            return false;
+
         char[] charsPassword = password.toCharArray();
         for (char c : charsPassword) {
             if (Character.isUpperCase(c)) {
@@ -121,6 +124,6 @@ public class Utilisateur implements Comparable<Utilisateur> {
      * @return une représentation sous forme de chaîne de cet utilisateur
      */
     public String toString() {
-        return "Username : " + user + " (Mot de passe: " + password + ")";
+        return "Username: " + user + " (Mot de passe: " + password + ")";
     }
 }

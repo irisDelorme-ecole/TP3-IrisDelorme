@@ -2,12 +2,15 @@ package app;
 
 import reseau.CivixNet;
 import reseau.ReseauBuilder;
+import reseau.Utilisateur;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Cette classe représente l'interface utilisateur graphique pour afficher le réseau social CivixNet

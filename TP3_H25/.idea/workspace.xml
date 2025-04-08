@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4403c7db-17d2-42a0-bdc2-ed6cf3fcfc34" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reseau/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reseau/Utilisateur.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,17 +18,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2vMhoNLUakUECZnbvP6zZLxxXtC" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -41,17 +41,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.UtilisateurTest.executor": "Coverage",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/iris/TP3-IrisDelorme/TP3_H25",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/iris/school/TP3-IrisDelorme/TP3_H25",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,63 +74,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="tests" />
       <recent name="reseau" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CivixNetSwingUI">
-    <configuration name="CivixNetSwingUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.CivixNetSwingUI" />
-      <module name="TP3_H25" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="TP3_H25" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CivixNetTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP3_H25" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="reseau.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="reseau" />
-      <option name="MAIN_CLASS_NAME" value="reseau.CivixNetTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CivixNetTest.testPropagationFausseInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP3_H25" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="reseau.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="reseau" />
-      <option name="MAIN_CLASS_NAME" value="reseau.CivixNetTest" />
-      <option name="METHOD_NAME" value="testPropagationFausseInformation" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="tests in TP3_H25" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UtilisateurTest.testToString">
+    <configuration name="UtilisateurTest.getPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP3_H25" />
       <extension name="coverage">
         <pattern>
@@ -136,33 +88,99 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
+      <option name="METHOD_NAME" value="getPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilisateurTest.getUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP3_H25" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
+      <option name="METHOD_NAME" value="getUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilisateurTest.setPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP3_H25" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
+      <option name="METHOD_NAME" value="setPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilisateurTest.setUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP3_H25" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
+      <option name="METHOD_NAME" value="setUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UtilisateurTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP3_H25" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
+      <option name="METHOD_NAME" value="testToString" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.CivixNetSwingUI" />
-      <item itemvalue="JUnit.tests in TP3_H25" />
-      <item itemvalue="JUnit.CivixNetTest (1)" />
-      <item itemvalue="JUnit.CivixNetTest.testPropagationFausseInformation" />
+      <item itemvalue="JUnit.UtilisateurTest.getPassword" />
+      <item itemvalue="JUnit.UtilisateurTest.getUsername" />
+      <item itemvalue="JUnit.UtilisateurTest.setPassword" />
+      <item itemvalue="JUnit.UtilisateurTest.setUsername" />
+      <item itemvalue="JUnit.UtilisateurTest.testToString" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CivixNetSwingUI" />
-        <item itemvalue="JUnit.CivixNetTest (1)" />
-        <item itemvalue="JUnit.tests in TP3_H25" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.CivixNetTest.testPropagationFausseInformation" />
+        <item itemvalue="JUnit.UtilisateurTest.testToString" />
+        <item itemvalue="JUnit.UtilisateurTest.setPassword" />
+        <item itemvalue="JUnit.UtilisateurTest.setUsername" />
+        <item itemvalue="JUnit.UtilisateurTest.getPassword" />
+        <item itemvalue="JUnit.UtilisateurTest.getUsername" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
       </set>
     </attachedChunks>
   </component>
@@ -185,6 +203,7 @@
       <workItem from="1743987931406" duration="18000" />
       <workItem from="1744033352269" duration="55000" />
       <workItem from="1744126038391" duration="2085000" />
+      <workItem from="1744131758240" duration="2415000" />
     </task>
     <servers />
   </component>

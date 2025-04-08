@@ -58,4 +58,8 @@ public class Utilisateur implements Comparable<Utilisateur> {
         }
         return hasUpper && hasLower && hasNumber;
     }
+
+    public String toString(){
+        return "Username : " + user + " (Mot de passe: " + password + ")";
+    }
 }

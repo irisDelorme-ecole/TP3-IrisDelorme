@@ -1,6 +1,5 @@
 package reseau;
 
-import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -19,7 +18,7 @@ public class CivixNet {
      * La clé est un utilisateur, et la valeur est l'ensemble des utilisateurs qu'il suit.
      */
     private Map<Utilisateur, Set<Utilisateur>> utilisateurs;
-
+//donc key: l'utilisateur, valeur: ceux qu'il suit.
     /**
      * Constructeur par défaut. Initialise un réseau vide.
      */
@@ -33,8 +32,8 @@ public class CivixNet {
      * @return une map représentant les utilisateurs et leurs abonnements
      */
     public Map<Utilisateur, Set<Utilisateur>> getUtilisateurs() {
-        // TODO: Compléter cette méthode
-        return null;
+        // TODO: Compléter cette méthode/
+        return utilisateurs;
     }
 
     /**
@@ -46,6 +45,7 @@ public class CivixNet {
      */
     public void ajouterUtilisateur(String username, String password) {
         // TODO: Compléter cette méthode
+        utilisateurs.put(new Utilisateur(username, password), new HashSet<>());
     }
 
     /**
@@ -56,6 +56,7 @@ public class CivixNet {
      */
     public void ajouterAbonnement(Utilisateur compte, Utilisateur nouvelAbonnement) {
         // TODO: Compléter cette méthode
+        utilisateurs.get(compte).add(nouvelAbonnement);
     }
 
     /**
@@ -66,6 +67,7 @@ public class CivixNet {
      */
     public void retirerAbonnement(Utilisateur compte, Utilisateur abonnementARetirer) {
         // TODO: Compléter cette méthode
+        utilisateurs.get(compte).remove(abonnementARetirer);
     }
 
     /**
@@ -76,6 +78,9 @@ public class CivixNet {
      */
     public void ajouterAbonnements(Utilisateur compte, List<Utilisateur> nouveauxAbonnements) {
         // TODO: Compléter cette méthode
+        for (Utilisateur u : nouveauxAbonnements) {
+           ajouterAbonnement(compte, u);
+        }
     }
 
     /**
@@ -86,6 +91,9 @@ public class CivixNet {
      */
     public void retirerAbonnements(Utilisateur compte, List<Utilisateur> abonnementsARetirer) {
         // TODO: Compléter cette méthode
+        for (Utilisateur u : abonnementsARetirer) {
+            utilisateurs.get(compte).remove(u);
+        }
     }
 
     /**
@@ -95,9 +103,20 @@ public class CivixNet {
      * @return l'objet {@link Utilisateur} correspondant
      * @throws RuntimeException si l'utilisateur n'existe pas
      */
-    public Utilisateur obtenirUtilisateurAPartirDuUsername(String username) {
+    public Utilisateur obtenirUtilisateurAPartirDuUsername(String username) throws RuntimeException{
         // TODO: Compléter cette méthode
-        return null;
+
+        Utilisateur uARechercher = new Utilisateur(username, "PassWordVal1de");
+        Utilisateur temp = null;
+        Iterator<Utilisateur> iter = utilisateurs.keySet().iterator();
+        while (iter.hasNext()) {
+            temp = iter.next();
+            if (temp.compareTo(uARechercher) == 0) {
+                return temp;
+            }
+        }
+        throw new RuntimeException("L'utilisateur n'existe pas");
+
     }
 
     /**
@@ -109,7 +128,7 @@ public class CivixNet {
      */
     public boolean abonnementMutuel(Utilisateur u1, Utilisateur u2) {
         // TODO: Compléter cette méthode
-        return false;
+        return (utilisateurs.get(u1).contains(u2) && utilisateurs.get(u2).contains(u1));
     }
 
     /**
@@ -152,6 +171,24 @@ public class CivixNet {
     @Override
     public String toString() {
         // TODO: Compléter cette méthode
-        return null;
+        String str = "=== Réseau CivixNet ===\n";
+
+        int compteur = 0;
+
+        for(Map.Entry<Utilisateur, Set<Utilisateur>> u : utilisateurs.entrySet()) {
+            compteur = 0;
+            str += u.getKey().getUsername() + " suit : ";
+            if (u.getValue().isEmpty()){
+                str += "aucun";
+            }else for (Utilisateur following : u.getValue()) {
+                compteur +=1;
+                str += following.getUsername();
+                 if (u.getValue().size() != compteur){
+                    str += ", ";
+                }
+            }
+            str += "\n";
+        }
+        return str;
     }
 }

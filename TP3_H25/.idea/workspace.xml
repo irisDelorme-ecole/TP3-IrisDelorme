@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4403c7db-17d2-42a0-bdc2-ed6cf3fcfc34" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/reseau/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reseau/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reseau/CivixNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reseau/CivixNet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +42,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.CivixNetTest.executor": "Run",
+    "JUnit.CivixNetTest.testToString.executor": "Run",
     "JUnit.UtilisateurTest.executor": "Coverage",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -78,8 +81,8 @@
       <recent name="reseau" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UtilisateurTest.testToString">
-    <configuration name="UtilisateurTest.getPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CivixNetTest.testToString">
+    <configuration name="CivixNetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP3_H25" />
       <extension name="coverage">
         <pattern>
@@ -88,14 +91,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
-      <option name="METHOD_NAME" value="getPassword" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="tests.CivixNetTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilisateurTest.getUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CivixNetTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP3_H25" />
       <extension name="coverage">
         <pattern>
@@ -104,8 +106,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
-      <option name="METHOD_NAME" value="getUsername" />
+      <option name="MAIN_CLASS_NAME" value="tests.CivixNetTest" />
+      <option name="METHOD_NAME" value="testToString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,19 +162,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UtilisateurTest.getPassword" />
-      <item itemvalue="JUnit.UtilisateurTest.getUsername" />
+      <item itemvalue="JUnit.CivixNetTest" />
+      <item itemvalue="JUnit.CivixNetTest.testToString" />
       <item itemvalue="JUnit.UtilisateurTest.setPassword" />
       <item itemvalue="JUnit.UtilisateurTest.setUsername" />
       <item itemvalue="JUnit.UtilisateurTest.testToString" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CivixNetTest.testToString" />
+        <item itemvalue="JUnit.CivixNetTest" />
         <item itemvalue="JUnit.UtilisateurTest.testToString" />
         <item itemvalue="JUnit.UtilisateurTest.setPassword" />
         <item itemvalue="JUnit.UtilisateurTest.setUsername" />
-        <item itemvalue="JUnit.UtilisateurTest.getPassword" />
-        <item itemvalue="JUnit.UtilisateurTest.getUsername" />
       </list>
     </recent_temporary>
   </component>
@@ -204,6 +206,7 @@
       <workItem from="1744033352269" duration="55000" />
       <workItem from="1744126038391" duration="2085000" />
       <workItem from="1744131758240" duration="2415000" />
+      <workItem from="1744217848984" duration="2927000" />
     </task>
     <servers />
   </component>
@@ -211,6 +214,15 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tests/CivixNetTest.java</url>
+          <line>151</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.util.TreeMap$Entry" memberName="value" />

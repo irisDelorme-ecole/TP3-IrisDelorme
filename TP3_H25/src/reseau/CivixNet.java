@@ -32,7 +32,6 @@ public class CivixNet {
      * @return une map représentant les utilisateurs et leurs abonnements
      */
     public Map<Utilisateur, Set<Utilisateur>> getUtilisateurs() {
-        // TODO: Compléter cette méthode/
         return utilisateurs;
     }
 
@@ -55,7 +54,6 @@ public class CivixNet {
      * @param nouvelAbonnement l'utilisateur à suivre
      */
     public void ajouterAbonnement(Utilisateur compte, Utilisateur nouvelAbonnement) {
-        // TODO: Compléter cette méthode
         utilisateurs.get(compte).add(nouvelAbonnement);
     }
 
@@ -66,7 +64,6 @@ public class CivixNet {
      * @param abonnementARetirer l'utilisateur à ne plus suivre
      */
     public void retirerAbonnement(Utilisateur compte, Utilisateur abonnementARetirer) {
-        // TODO: Compléter cette méthode
         utilisateurs.get(compte).remove(abonnementARetirer);
     }
 
@@ -77,7 +74,6 @@ public class CivixNet {
      * @param nouveauxAbonnements la liste des nouveaux abonnements
      */
     public void ajouterAbonnements(Utilisateur compte, List<Utilisateur> nouveauxAbonnements) {
-        // TODO: Compléter cette méthode
         for (Utilisateur u : nouveauxAbonnements) {
            ajouterAbonnement(compte, u);
         }
@@ -90,7 +86,6 @@ public class CivixNet {
      * @param abonnementsARetirer la liste des abonnements à supprimer
      */
     public void retirerAbonnements(Utilisateur compte, List<Utilisateur> abonnementsARetirer) {
-        // TODO: Compléter cette méthode
         for (Utilisateur u : abonnementsARetirer) {
             utilisateurs.get(compte).remove(u);
         }
@@ -104,7 +99,6 @@ public class CivixNet {
      * @throws RuntimeException si l'utilisateur n'existe pas
      */
     public Utilisateur obtenirUtilisateurAPartirDuUsername(String username) throws RuntimeException{
-        // TODO: Compléter cette méthode
 
         Utilisateur uARechercher = new Utilisateur(username, "PassWordVal1de");
         Utilisateur temp = null;
@@ -127,7 +121,6 @@ public class CivixNet {
      * @return {@code true} si u1 suit u2, sinon {@code false}
      */
     public boolean abonnementMutuel(Utilisateur u1, Utilisateur u2) {
-        // TODO: Compléter cette méthode
         return (utilisateurs.get(u1).contains(u2) && utilisateurs.get(u2).contains(u1));
     }
 
@@ -146,8 +139,27 @@ public class CivixNet {
      * @return une liste triée en ordre alphabétique inverse des utilisateurs affectés sans doublons
      */
     public ArrayList<Utilisateur> propagationFausseInformationRecursive(String username) {
-        // TODO: Compléter cette méthode
-        return null;
+
+       Set<Utilisateur> affectes = new HashSet<Utilisateur>();
+
+       affectes.add(obtenirUtilisateurAPartirDuUsername(username));
+
+        for (int i = 0; i < 2; i++) {
+
+                for(Utilisateur u : affectes) {
+                    propagerRecursive(u, i, 2,affectes);
+                }
+        }
+
+        ArrayList<Utilisateur> affectesList = new ArrayList<Utilisateur>();
+
+        affectesList.addAll(affectes);
+
+        affectesList.sort(null);
+
+        Collections.reverse(affectesList);
+
+        return affectesList;
     }
 
     /**
@@ -160,6 +172,9 @@ public class CivixNet {
      */
     private void propagerRecursive(Utilisateur courant, int niveau, int maxNiveau, Set<Utilisateur> affectes) {
         // TODO: Compléter cette méthode
+        if (niveau < maxNiveau) {
+           affectes.addAll(utilisateurs.get(courant));
+        }
     }
 
 

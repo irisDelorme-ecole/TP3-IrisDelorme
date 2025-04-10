@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4403c7db-17d2-42a0-bdc2-ed6cf3fcfc34" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reseau/ReseauBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reseau/ReseauBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reseau/CivixNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/reseau/CivixNet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +43,11 @@
   "keyToString": {
     "Application.CivixNetSwingUI.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.CivixNetTest.executor": "Run",
+    "JUnit.CivixNetTest.executor": "Debug",
+    "JUnit.CivixNetTest.testPropagationAvecCycle.executor": "Run",
+    "JUnit.CivixNetTest.testPropagationAvecDoublonsPotentiels.executor": "Run",
+    "JUnit.CivixNetTest.testPropagationFausseInformation.executor": "Run",
+    "JUnit.CivixNetTest.testPropagationUtilisateurSansAbonnements.executor": "Run",
     "JUnit.CivixNetTest.testToString.executor": "Run",
     "JUnit.UtilisateurTest.executor": "Coverage",
     "Repository.Attach.Annotations": "false",
@@ -82,20 +86,7 @@
       <recent name="reseau" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CivixNetSwingUI">
-    <configuration name="CivixNetSwingUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.CivixNetSwingUI" />
-      <module name="TP3_H25" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CivixNetTest">
     <configuration name="CivixNetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP3_H25" />
       <extension name="coverage">
@@ -111,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CivixNetTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CivixNetTest.testPropagationAvecCycle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP3_H25" />
       <extension name="coverage">
         <pattern>
@@ -121,13 +112,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CivixNetTest" />
-      <option name="METHOD_NAME" value="testToString" />
+      <option name="METHOD_NAME" value="testPropagationAvecCycle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilisateurTest.setPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CivixNetTest.testPropagationAvecDoublonsPotentiels" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP3_H25" />
       <extension name="coverage">
         <pattern>
@@ -136,14 +127,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
-      <option name="METHOD_NAME" value="setPassword" />
+      <option name="MAIN_CLASS_NAME" value="tests.CivixNetTest" />
+      <option name="METHOD_NAME" value="testPropagationAvecDoublonsPotentiels" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UtilisateurTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CivixNetTest.testPropagationFausseInformation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP3_H25" />
       <extension name="coverage">
         <pattern>
@@ -152,27 +143,43 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.UtilisateurTest" />
-      <option name="METHOD_NAME" value="testToString" />
+      <option name="MAIN_CLASS_NAME" value="tests.CivixNetTest" />
+      <option name="METHOD_NAME" value="testPropagationFausseInformation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CivixNetTest.testPropagationUtilisateurSansAbonnements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP3_H25" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CivixNetTest" />
+      <option name="METHOD_NAME" value="testPropagationUtilisateurSansAbonnements" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CivixNetSwingUI" />
+      <item itemvalue="JUnit.CivixNetTest.testPropagationAvecCycle" />
+      <item itemvalue="JUnit.CivixNetTest.testPropagationAvecDoublonsPotentiels" />
+      <item itemvalue="JUnit.CivixNetTest.testPropagationFausseInformation" />
+      <item itemvalue="JUnit.CivixNetTest.testPropagationUtilisateurSansAbonnements" />
       <item itemvalue="JUnit.CivixNetTest" />
-      <item itemvalue="JUnit.CivixNetTest.testToString" />
-      <item itemvalue="JUnit.UtilisateurTest.setPassword" />
-      <item itemvalue="JUnit.UtilisateurTest.testToString" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CivixNetSwingUI" />
-        <item itemvalue="JUnit.CivixNetTest.testToString" />
         <item itemvalue="JUnit.CivixNetTest" />
-        <item itemvalue="JUnit.UtilisateurTest.testToString" />
-        <item itemvalue="JUnit.UtilisateurTest.setPassword" />
+        <item itemvalue="JUnit.CivixNetTest.testPropagationAvecDoublonsPotentiels" />
+        <item itemvalue="JUnit.CivixNetTest.testPropagationAvecCycle" />
+        <item itemvalue="JUnit.CivixNetTest.testPropagationUtilisateurSansAbonnements" />
+        <item itemvalue="JUnit.CivixNetTest.testPropagationFausseInformation" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +212,7 @@
       <workItem from="1744126038391" duration="2085000" />
       <workItem from="1744131758240" duration="2415000" />
       <workItem from="1744217848984" duration="2927000" />
-      <workItem from="1744301562416" duration="2494000" />
+      <workItem from="1744301562416" duration="5977000" />
     </task>
     <servers />
   </component>
@@ -215,10 +222,14 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.ConcurrentModificationException" package="java.util" />
+          <option name="timeStamp" value="11" />
+        </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tests/CivixNetTest.java</url>
-          <line>151</line>
-          <option name="timeStamp" value="4" />
+          <line>129</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

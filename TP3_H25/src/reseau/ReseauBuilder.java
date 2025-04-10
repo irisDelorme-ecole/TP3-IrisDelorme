@@ -1,6 +1,13 @@
 package reseau;
 
-import java.io.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * La classe {@code ReseauBuilder} fournit des utilitaires pour
@@ -12,6 +19,11 @@ import java.io.*;
  * </p>
  */
 public class ReseauBuilder {
+    // Séparateur de fichier pour garantir la compatibilité multiplateforme
+    private static final char fSep = File.separatorChar;
+
+    // Chemin d'accès par défaut vers le répertoire des données
+    private static final String pathIn = System.getProperty("user.dir") + fSep + "src" + fSep;
 
     /**
      * Charge un objet {@link CivixNet} à partir d'un fichier JSON.
@@ -40,7 +52,25 @@ public class ReseauBuilder {
      */
     public static CivixNet chargerDepuisJSON(String cheminFichier) throws Exception {
         // TODO: Compléter cette méthode
-        return null;
+
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode racine = mapper.readTree(new File(pathIn + cheminFichier)).get("utilisateurs");
+
+            CivixNet charged = new CivixNet();
+
+            List<String> abonnementsList = new ArrayList<>();
+
+
+            for (int i = 0; i < racine.size(); i++) {
+                charged.ajouterUtilisateur(racine.get(i).get("username").asText(), racine.get(i).get("password").asText());
+
+            }
+            for (int i = 0; i < racine.size(); i++) {
+                for (int j = 0; j < racine.get(i).get("abonnements").size(); j++) {
+                charged.ajouterAbonnement(charged.obtenirUtilisateurAPartirDuUsername(racine.get(i).get("username").asText()), charged.obtenirUtilisateurAPartirDuUsername(racine.get(i).get("abonnements").get(j).asText()));
+                }
+            }
+            return charged;
     }
 
     /**

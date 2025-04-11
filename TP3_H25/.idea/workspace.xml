@@ -43,7 +43,7 @@
   "keyToString": {
     "Application.CivixNetSwingUI.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.CivixNetTest.executor": "Debug",
+    "JUnit.CivixNetTest.executor": "Run",
     "JUnit.CivixNetTest.testPropagationAvecCycle.executor": "Run",
     "JUnit.CivixNetTest.testPropagationAvecDoublonsPotentiels.executor": "Run",
     "JUnit.CivixNetTest.testPropagationFausseInformation.executor": "Run",
@@ -213,6 +213,7 @@
       <workItem from="1744131758240" duration="2415000" />
       <workItem from="1744217848984" duration="2927000" />
       <workItem from="1744301562416" duration="5977000" />
+      <workItem from="1744389798089" duration="1495000" />
     </task>
     <servers />
   </component>

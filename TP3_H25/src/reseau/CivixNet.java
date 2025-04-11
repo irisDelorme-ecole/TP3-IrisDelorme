@@ -140,18 +140,24 @@ public class CivixNet {
      */
     public ArrayList<Utilisateur> propagationFausseInformationRecursive(String username) {
 
+       Set<Utilisateur> affectesCourant = new HashSet<Utilisateur>();
+
        Set<Utilisateur> affectes = new HashSet<Utilisateur>();
 
-       affectes.add(obtenirUtilisateurAPartirDuUsername(username));
+        ArrayList<Utilisateur> affectesList = new ArrayList<Utilisateur>();
+
+        affectes.add(obtenirUtilisateurAPartirDuUsername(username));
 
         for (int i = 0; i < 2; i++) {
 
                 for(Utilisateur u : affectes) {
-                    propagerRecursive(u, i, 2,affectes);
+                    propagerRecursive(u, i, 2,affectesCourant);
                 }
+                affectes.addAll(affectesCourant);
+                affectesCourant.clear();
         }
 
-        ArrayList<Utilisateur> affectesList = new ArrayList<Utilisateur>();
+
 
         affectesList.addAll(affectes);
 
